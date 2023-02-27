@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
 import { Global } from "../../helpers/Global";
-import { MDBInputGroup, MDBCheckbox, MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
 export const Login = () => {
   const { form, changed } = useForm({});

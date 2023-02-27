@@ -9,9 +9,7 @@ export const PrivateLayout = () => {
   } else {
     return (
       <>
-        <section className="layout__content">
-          {auth._id ? <Outlet /> : <Navigate to="/login" />}
-        </section>
+        {auth.id ? <Outlet /> : <Navigate to="/login" />}
       </>
     );
   }

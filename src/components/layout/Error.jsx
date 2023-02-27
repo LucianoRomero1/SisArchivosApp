@@ -6,7 +6,7 @@ export const Error = () => {
     <div className="text-center mt-2">
       <h2>Error 404</h2>
       <strong>Esta página no existe </strong>
-      <Link to="/home">Volver al inicio</Link>
+      <Link to="/">Volver al inicio</Link>
     </div>
   );
 };

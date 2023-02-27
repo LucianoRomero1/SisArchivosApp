@@ -18,8 +18,9 @@ export const Routing = () => {
           </Route>
           <Route path="/social" element={<PrivateLayout />}>
             <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
           </Route>
-          <Route path="*" element={<Error />}></Route>
+          <Route path="*" element={<Error />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
