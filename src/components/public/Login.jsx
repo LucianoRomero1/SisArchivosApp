@@ -26,10 +26,11 @@ export const Login = () => {
       localStorage.setItem("user", JSON.stringify(data.user));
 
       setSaved("logged");
-      setAuth(data.user);
+
       setTimeout(() => {
+        setAuth(data.user);
         window.location.reload();
-      }, 500);
+      }, 1000);
     } else {
       setSaved("error");
     }
@@ -73,6 +74,19 @@ export const Login = () => {
             Ingresar
           </button>
         </form>
+        <div className="text-center mt-2">
+          {saved == "logged" ? (
+            <strong className="alert alert-success">User logged in</strong>
+          ) : (
+            ""
+          )}
+
+          {saved == "error" ? (
+            <strong className="alert alert-danger">Failed to login</strong>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );
